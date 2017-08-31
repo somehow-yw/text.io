@@ -120,7 +120,7 @@
 		<span class="closeBtn"></span>
 	</div>
 	<div class="same_news">
-		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
+		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
 		<div class="imgbox">
 			<img src="images/imgnews.jpg" />
 			<img src="images/imgnews.jpg" />
@@ -130,7 +130,7 @@
 		<span class="closeBtn"></span>
 	</div>
 	<div class="same_news">
-		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中部队是龙焱？有人竟把它排名第三部队是龙焱？有人竟把它</p>
+		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
 		<div class="imgbox">
 			<img src="images/imgnews.jpg" />
 			<img src="images/imgnews.jpg" />
@@ -139,11 +139,12 @@
 		<p class="pl img_pl"><span class="plname">纵深</span><span class="pltimes">3177评论</span><span class="pltime">4小时前</span></p>
 		<span class="closeBtn"></span>
 	</div>
+	
 </div>
 
 
 <!--头条内容结束-->
-<footer style="padding-bottom:5rem;text-align: center;">
+<footer style="padding-bottom:5rem;text-align: center;" id="footer">
        <img src="images/get_loading.gif">
         <p style="color: rgb(130,130,130);font-size: 1rem;">加载中</p>
 </footer>
@@ -328,11 +329,6 @@
             $(".ios_tips").hide()
         }
     }
-	//点击加载更多
-//	getNewsList (){
-//		console.log(123)
-//	}
-	
     //判断是否是safari浏览器
      var ua = window.navigator.userAgent;
      alert(ua);
@@ -368,20 +364,26 @@
 <script src="../js/redirect.js"></script>
  
 <script>
-	getURL();
-	browserListRedirect();
+//	getURL();
+//	browserListRedirect();
 </script>
 <script>
-	function getMoreNews () {
-		var ingBox = $('.loading-img')[0].style.display = 'block';
+	var winHeight = window.screen.availHeight ,//浏览器窗口高度
+		documentHeight = document.body.scrollHeight , //文档高度
+		scrollHeight = 0; //滚动高度
+	window.onscroll = function (e) { //监听页面滚动事件
+		var e = e || window.event;
+		alert('页面滚动开始,检测手机和苹果端是否支持Window.onsroll事件');
+		scrollHeight = document.documentElement.scrollTop||document.body.scrollTop;
+		alert('浏览器窗口的高度', winHeight, '文档高度', documentHeight, '滚动高度', scrollHeight);
+		console.log('浏览器窗口的高度', winHeight, '文档高度', documentHeight, '滚动高度', scrollHeight);
+		if (scrollHeight+winHeight >= documentHeight){
+			$('#footer').show();
+		}
+		else if (scrollHeight+winHeight < documentHeight){
+			$('#footer').hide();
+		}
 	}
-//	var dotdotdot = $('.same_news_title');
-//	for(var i in dotdotdot){
-//		$clamp(dotdotdot[i], {clamp: 2});
-//	}
-//	var line3 = $('.singleImg_title')[0];
-//	$clamp(line3, {clamp:3});
-
 </script>
 
 </body>

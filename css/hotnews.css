@@ -34,7 +34,6 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 	  display: -ms-box;
 	  display: -o-box;
 	  display: box;
-	  word-break: break-all;
 	}
 .mediaBox {
 	margin: 0 1.28rem;
@@ -122,8 +121,6 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 	  display: -ms-box;
 	  display: -o-box;
 	  display: box;
-	  word-break: break-all;
-	
 	}
 .imgbox{
 	display: flex;
@@ -162,7 +159,6 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
 	overflow: hidden;     
-	overflow: hidden;
 	  -webkit-line-clamp: 3;
 	  -moz-line-clamp: 3;
 	  -ms-line-clamp: 3;
@@ -178,7 +174,6 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 	  display: -ms-box;
 	  display: -o-box;
 	  display: box;
-	  word-break: break-all;
 	}
 .singleImgNum{
 	position: absolute;
@@ -191,4 +186,7 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 	font-size: 0.506rem;
 	text-align: center;
 	color: #fff;
+}
+#footer{
+	display: none;
 }
