@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="fonts/font2/iconfont.css"/>
     <script src="./js/jquery-1.12.min.js?v=2"></script>
     <script src="js/mui.min.js"></script>
+
 </head>
 <body>
 			<!--loading放在最上面  页面一开始加载就出现loading图标-->
@@ -45,7 +46,7 @@
 	
 <img src="./images/icon.png" width="0" height="0" style="position:absolute;left:-9999px">
 <!-- start 主导航 -->
-<div class="ui-bar" data-ui="header danger static" id="header">
+<div class="ui-bar" data-ui="header danger static" id="header" class="mui-scroll-wrapper">
     <h1 data-ui="title">4488头条</h1>
     <div class="ui-btns     -mob-share-open" data-ui="inline rounded" 
     onclick="_hmt.push(['_trackEvent', BAIDUTONGJI_CATEGORY.ON_GAME_LIST+' ,'+BAIDUTONGJI_OPTION.COLLECTION+', '+BAIDUTONGJI_CATEGORY.ON_GAME_LIST+'])">
@@ -156,19 +157,28 @@
 	//这里写获得数据。有数据返回之后，加上这句话： $('.loading-img')[0].hide()
 		
 		//启用双击监听
-	mui.init({
-		pullRefresh:{
-			container: document.querySelector('#same_news'),
-			up: {
-				height:8,
-				auto:false,
-				callback: function () {
-					$('#footer').show();
-					this.endPullupToRefresh(true);
-				}
-			}
+//	mui.init({
+//		pullRefresh:{
+//			container: document.querySelector('#same_news'),
+//			up: {
+//				height:8,
+//				auto:false,
+//				callback: function () {
+//					$('#footer').show();
+//					this.endPullupToRefresh(tru0);
+//				}
+//			}
+//		}
+//	});
+	var scrollHeight = $('body')[0].scrollHeight;
+	console.log($(window))
+	$(document).scroll(function(){
+		var scrollTop = $('body')[0].scrollTop;
+		if (innerHeight+scrollTop+4>scrollHeight){
+			$('#footer').show();
 		}
-	});
+		console.log(scrollHeight,innerHeight,scrollTop)
+	})
 	</script>
 </body>
 </html>
