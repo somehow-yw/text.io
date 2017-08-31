@@ -154,28 +154,15 @@
 </div>
 
 	<script type="text/javascript">
-	//这里写获得数据。有数据返回之后，加上这句话： $('.loading-img')[0].hide()
-		
-		//启用双击监听
-//	mui.init({
-//		pullRefresh:{
-//			container: document.querySelector('#same_news'),
-//			up: {
-//				height:8,
-//				auto:false,
-//				callback: function () {
-//					$('#footer').show();
-//					this.endPullupToRefresh(tru0);
-//				}
-//			}
-//		}
-//	});
 	var scrollHeight = $('body')[0].scrollHeight;
 	console.log($(window))
 	$(document).scroll(function(){
 		var scrollTop = $('body')[0].scrollTop;
 		if (innerHeight+scrollTop+4>scrollHeight){
-			$('#footer').show();
+			var timer = setTimeout(function(){
+				$('#footer').show();
+			},1000)
+			
 		}
 		console.log(scrollHeight,innerHeight,scrollTop)
 	})
