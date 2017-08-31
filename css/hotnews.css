@@ -191,4 +191,5 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 #footer{
 	display: none;
 }
-.mui-pull{display: none !important;}
+.mui-visibility{display: none !important;}
+.loading-img{display: none;}
