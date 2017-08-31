@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+	    <meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	  	<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	  	<title></title>   
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="https://cdn.bootcss.com/blueimp-md5/2.7.0/js/md5.js"></script>
+		<script src="../js/commun.js?v=8"></script>
+		<script src="novice_pack.js?v=39"></script>
+		<meta name="apple-mobile-web-app-title" content="4488.mobi">
+	    <meta property="qc:admins" content="2357776527651056375">
+	    <link rel="shortcut icon" href="../images/logo200.png">
+	     <link rel="apple-touch-icon" href="../images/logo200.png">
+		<script src="../js/swiper.jquery.min.js"></script>
+		<script src="../js/list.js?v=6"></script>
+		<script src="../js/fastclick.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="novice_pack.css?v=2"/>
+		<script src="../js/public.js?v=1.0.121212"></script>
+		<script src="../js/user.js?v=30"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<style>
+			
+		</style>
+	</head>
+	<body  style="background: white;">
+		
+		<!--loading放在最上面  页面一开始加载就出现loading图标-->
+		<!--<div class="loading-bg">-->
+			<div class="loading-img">
+				<img src="../images/loading.gif"/>
+			</div>
+		<!--</div>-->
+		
+		
+		<header class="mui-bar mui-bar-nav" style="background: #00B6F0;box-sizing: content-box;box-shadow: none;">
+			<p class="search-p">
+				<i onclick="searchGame()" class="mui-icon mui-icon-search search-Game"></i>				
+				<input type="text" class="search-input" placeholder="输入游戏名称"  onkeyup="searchInput()"/>
+				<a href="javascript:void(0);" class="cha" onclick="emptyClick()">
+					<i class="mui-icon mui-icon-closeempty empty-input"></i>
+				</a>
+			</p>
+		</header>
+		
+		<!--轮播说-->
+		 <div class="mui-slider">
+			  <div class="mui-slider-group" id="group">
+			  		<div class="mui-slider-item">
+			  			
+			  		</div>
+			  	
+ 			  </div>
+ 			 <div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+	
+			<div class="gifts-title">
+				<span></span>
+				<span>热门礼包</span>
+			</div>
+			
+		<!--<div class="novice-pack-container">   
+			
+						
+	 	 </div>	-->
+
+<section id="gamelist-wrap">
+	
+		<div class="no-pack" style="display: none;"><p id="no-pack-img"><img src="../images/no_pack.png"/></p>
+      		<p>该游戏暂时没有礼包哦~</p>      		
+      	</div>
+    <div data-role="body">
+        <div class="list" data-ui="" data-source="/wy-more-p-_page_.html" id="gamelist">
+        		
+        	</div>
+      
+          
+    </div>
+    <footer>
+        <a class="ui-btn more" id="moreBtn" onclick="getPackList(0,null,2)" data-ui="block">点击加载更多</a>
+    </footer>
+    <br/><br/><br/><br/><br/> 
+</section>
+
+	
+<div class="footer">
+    <ul>
+        <li>
+            <a href="../list.html">
+                <img src="../images/gameUnClick.png">
+                <p>游戏</p>
+            </a>
+        </li>
+        
+         <li>
+            <a href="../gifts/noviece_pack.html">
+                <img src="../images/giftClick.png">
+                <p style="color: #00B6F0;">礼包</p>
+            </a>
+        </li> 
+        <li>
+            <a href="../user/personal.html">
+                <img src="../images/mine.png">
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+		<div id="get-bg" class="get-bg" style="display: none;">
+			<div class="get-success">
+				<p>领取成功</p>
+				<p>长按礼包号复制：</p>
+				<p class="copy-text" id="copy-text">
+					 
+				</p>
+			</div>
+			<p class="cha-p">
+				<a href="javascript:void(0);" class="cha-a" onclick="closeGetSuccess()"><i class="mui-icon mui-icon-closeempty"></i></a>
+			</p>
+		</div>
+
+ 
+		
+
+		<script>
+			
+//
+//$(function(){
+//  new FastClick(document.body);
+//})
+			
+		getBannerByPack();//游戏广告
+		getPackList(1);//列表
+/* 			mui.init({
+		pullRefresh: {
+			container: '#pullrefresh',
+			up: {
+				height:100,
+				auto:true,//可选,默认false.自动上拉加载一次
+				contentrefresh: '正在加载...',
+				callback: getPackList
+			}
+		}
+	}); */
+	
+	//上拉加载
+
+		
+
+		/* function pullupRefresh(div,pageNumTotal,pageNum,data) {	
+			 
+			setTimeout(function() {
+			  mui('#pullrefresh').pullRefresh().endPullupToRefresh((pageNum >= pageNumTotal)); //参数为true代表没有更多数据了。20是总的条目数
+		      var table = document.body.querySelector('.mui-table-view');
+		      var cells = document.body.querySelectorAll('.mui-table-view-cell');
+		      for (var i = cells.length, len = 10; i < data.length; i++) {
+		      var pId = data[i].id;
+		      	var content = data[i].content;
+	        		var guide = data[i].guide;
+	        		var index = 8;
+	        		if(content.length > index){
+	        			content = content.substring(0,index);
+	        			content +="..";
+	        		}
+	        		if(guide.length > index){
+	        			guide = guide.substring(0,index);
+	        			guide +="..";
+	        		}
+	        		
+		        var li = document.createElement('li');
+		        li.className = 'mui-table-view-cell';
+		        var liId =  'list'+i;
+		        var title = '领取';
+		        
+		        if(data[i].isReceive == 1){
+		        	title = '已领取';
+		        }
+		        
+ 	 			li.id = liId;
+ 	 			
+ 	 			li.onclick=function(){
+ 	 				toPackDetailPage(pId);
+ 	 			};	       
+
+		        
+ 				var div = "";
+ 				var receiveButtonId = "receive"+i;
+ 				 
+	        		div += '<div class="novice-pack "  id="'+receiveButtonId+'" >';
+	        		div += '<div class="pack-left"  >';
+	        		div += '<div class="left-box"><img style="width:100%;" src="'+data[i].iconURL+'"/></div>';
+	        		div += '<div class="pack-content">';
+	        		div += '<h4>'+data[i].name+'</h4>';
+	        		div += '<p><span>礼包详情：</span><span>'+content+'</span></p>';
+	        		div += '<p><span>使用方法：</span><span>'+guide+'</span></p>';
+	        		div += '<p><span>剩余：</span><span>'+data[i].availableCount+'</span></p>'; 
+	        		div += '</div>';
+	        		div += '</div>';
+	        		 
+	        		 div += ' <button type="button" style="position:fiexed;width:80%;height:100%;top:-100px;opacity:0;z-index:1;" class="mui-btn mui-btn-outlined"></button>  ';
+	        		
+	 
+	        		div += '<a href="javascript:void(0)"  style="margin-top:-50px;z-index:99;width:60px" class="get">'+title+'</a>';
+	 
+	        		//div += '<button  id="'+receiveButtonId+'" class="get" onclick="receivePack()">领取2</a>';
+	        	
+	        		div += '</div>';
+	      
+		        
+					
+		        li.innerHTML = div;//"<div class='record'><div class='left-title'>买号-角色ID:0844669</div><div class='right-record'><p class='money-reduce'>-25.60</p><p class='date'>03/24  &nbsp;21:48:59</p></div></div>";
+		        
+		        table.appendChild(li);
+		      }	  
+		      console.log(mui('.novice-pack'))
+		     	mui('.novice-pack').each(function(){
+		        		console.log(this.children[2].click(function(){
+		        			alert(this);
+		        		}));
+		        	 
+		         					//receivePack(pId);
+		       });
+		    }, 1500);
+		    
+		    // this.endPullupToRefresh(false);
+		  } */
+
+		</script>
+		
+		<script src="novice_pack.js?v=7"></script>
+	</body>
+</html>

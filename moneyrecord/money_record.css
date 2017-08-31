@@ -1,0 +1,40 @@
+*{box-sizing: content-box;}
+.left-title{
+	float: left;
+	line-height: 40px;
+	font-size: 16px;
+}
+#record-container{
+	margin-top: 44px;
+}
+.right-record{
+	float: right;
+}
+.record{
+	padding-bottom: 9px;
+	padding-top: 10px;
+	border-bottom: 1px solid #ccc;
+	height: 40px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.money-add,.money-reduce,.date{
+	margin-bottom: 0;
+	text-align: right;	
+}
+.money-add{
+	color: #FF7F07;
+}
+.money-reduce{
+	color: #000;
+}
+
+.bot-text{
+	margin-top: 20px;
+	color: #FF7E07;
+	text-align: center;
+}
+.mui-table-view-cell{
+	margin: 0;
+	padding: 0;
+}

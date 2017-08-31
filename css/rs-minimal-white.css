@@ -1,0 +1,80 @@
+.rsMinW, .rsMinW .rsOverflow, .rsMinW .rsSlide, .rsMinW .rsVideoFrameHolder, .rsMinW .rsThumbs {
+	background: #fff;
+	color: #FFF;
+}
+
+
+
+.rsMinW .rsBullets {
+	position: absolute;
+	bottom: 10px;
+	right: 33%;
+	z-index: 35;
+	padding-top: 4px;
+	height: auto;
+	text-align: center;
+	line-height: 6px;
+	overflow: hidden;
+}
+.rsMinW .rsBullet {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	padding: 6px 5px 6px 4px;
+}
+.rsMinW .rsBullet span {
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #CCC;
+	background: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.rsMinW .rsBullet.rsNavSelected span {
+	background-color: #f90;
+}
+
+
+@media (max-width:768px){
+.rsMinW .rsBullets {
+	position: absolute;
+	bottom: 10px;
+	right: 37%;
+	z-index: 35;
+	padding-top: 4px;
+	height: auto;
+	text-align: center;
+	line-height: 6px;
+	overflow: hidden;
+}
+}  
+@media (max-width:480px){
+.rsMinW .rsBullets {
+	position: absolute;
+	bottom: 10px;
+	right: 30%;
+	z-index: 35;
+	padding-top: 24px;
+	height: auto;
+	text-align: center;
+	line-height: 6px;
+	overflow: hidden;
+}
+}  
+@media (max-width:320px){
+.rsMinW .rsBullets {
+	position: absolute;
+	bottom: 10px;
+	right: 27%;
+	z-index: 35;
+	padding-top: 4px;
+	height: auto;
+	text-align: center;
+	line-height: 6px;
+	overflow: hidden;
+}
+}
+

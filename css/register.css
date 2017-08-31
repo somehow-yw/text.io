@@ -1,0 +1,87 @@
+header{
+	background: #00B6F0 !important;
+	
+}
+body{
+	background: #F1EFF5!important;
+}
+/*返回*/
+#back-login{
+	color: white !important;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.reg-title{
+	color: white;
+}
+#next{
+	width: 100%;
+	background: #FF7E00;
+	border-radius: 5px;
+	height: 50px;
+	border: 0!important;
+	color: white;
+	font-size: 16px;
+}
+
+
+#form{
+	margin-top: 17%;
+	width:90%;
+	margin-left: 5%;
+}
+
+#get-verification{
+	display: block ;
+	float: right;
+	width: 35%;
+	height: 55px;
+	background: #FF7E00;
+	color: white;
+	text-align: center;
+	line-height: 55px;
+	border-radius: 4px;
+}
+#form p input{
+	border: 0!important;
+	border-radius: 6px;
+	height: 55px;
+	color: black !important;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */ 
+	color:#757575 !important; 
+} 
+
+.bot-images{
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 10%;
+}
+.reg-top{
+	float: left;
+}
+.forget-top{
+	float: right;
+}
+.register{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: #86C613;
+	flex-direction: column;
+}
+.forget-password{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: #13BBD6;
+}
+
+#unameReg{
+	margin-top: 20px;
+}
+

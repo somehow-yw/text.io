@@ -1,0 +1,469 @@
+
+<html data-env="">
+	<head>
+    <meta charset="UTF-8">
+  	<title>英雄无敌之死亡阴影,4488手游</title>   
+    <meta name="keywords" content="英雄无敌之死亡阴影" />
+    <meta name="description" content="英雄无敌之死亡阴影" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="browsermode" content="application">
+    <link rel="search" type="application/opensearchdescription+xml" title="4488手游搜索">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="4488手游">
+    <meta property="qc:admins" content="2357776527651056375">
+    <link rel="shortcut icon" href="./images/logo200.png">
+    <link rel="apple-touch-icon" href="./images/logo200.png">
+    <link rel="apple-touch-startup-image" href="./images/logo200.png">
+    <link rel="apple-touch-startup-image" href="./images/logo200.png" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="./images/logo200.png" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:portrait)">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-4/esl.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="./js/ShareSDK.js"></script>
+    <script src="js/jquery-1.12.min.js"></script>
+    <script src="./js/commun.js?v=2"></script>
+    <script src="./js/detail.js?v=3"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/detail2.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    
+     <style type="text/css">
+			.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			p img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+  
+    <script>
+        require.config({
+            'baseUrl': "http://static.51h5.com/main/m/201601131738/",
+            'paths': {},
+            'packages': [],
+            'urlArgs': ''
+        });
+    </script>
+
+    <style type="text/css">
+        .playBtn {   z-index:999; position:fixed; bottom:0; left:0; width:100%; _position:absolute; margin:0 auto;text-align:center;
+            _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow:visible; }
+    </style>
+
+
+    <script data-require-id="app" src="http://static.51h5.com/main/m/201601131738/app.js" async=""></script><link rel="stylesheet" type="text/css" href="http://f1.webshare.mob.com/code/mob-share.css"></head>
+<body class="" s-id="s8652553">
+<img  src="http://i5.51h5.com/item/1612/22/585b46f88ba94_wx.jpg" width="0" height="0" style="position:absolute;left:-9999px"><!-- start 主导航 -->
+<header class="ui-bar" data-ui="header danger static">
+    <a href="javascript:history.go(-1);" class="ui-btn"><img src="./images/back.png" class="goback">返回</a>
+     <h1 data-ui="title">英雄无敌之死亡阴影</h1>
+    <div class="ui-btns" data-ui="inline rounded">
+        <a class="-mob-share-ui-button -mob-share-open ui-btn">
+            <img src="./images/share.png" id="share">
+        </a>
+    </div>
+</header><!-- end 主导航 -->
+
+<div class="down-tips">
+    <img src="./images/androidBG.png" class="android_tips" style="display: none;">
+    <img src="./images/iosBG.png" class="ios_tips">
+</div>
+
+<div class="container game" id="game-detail">
+    <div class="info">
+        <div class="game">
+            <figure class="cover">
+                <img src="http://test.ismartinfo.cn/admin/u/cms/www/201704/24194139jg67.png">
+            </figure>
+
+            <div class="meta">
+                <h3 class="title" style="white-space:pre-wrap">英雄无敌之死亡阴影</h3>
+                <p class="count">
+                    一句话简介:
+                </p>
+                <p class="count">《英雄无敌之死亡阴影》是一款超刺激的SLG RPG冒险卡牌策略游戏</p>
+            </div>
+        </div>
+         <div class="zhekou">
+            <span>4.6</span>折
+        </div>
+    </div>
+
+    <div class="detail-btn">
+        <a href="">
+            详情
+        </a>
+    </div>    
+    
+    	<div id="slider" class="mui-slider">
+			<div class="mui-slider-group  mui-content-padded">
+				<!-- 第一张 -->
+				<div id="item1" class="mui-slider-item item1" style="width: 85%;">
+					<a href="javascript:void(0)" class="lb">
+					<p class="image-container">
+						<img id="img0" style="max-width:65%;" src="http://test.ismartinfo.cn/admin/u/cms/www/201704/241914211y94.jpg" data-preview-src="" data-preview-group="1" >
+					</p>
+					</a>
+				</div>
+				<div id="item2" class="mui-slider-item item1" style="width: 85%;">
+					<a href="javascript:void(0)" class="lb">
+					<p class="image-container">
+						<img id="img1" style="max-width:65%;" src="http://test.ismartinfo.cn/admin/u/cms/www/201704/241914220lny.jpg" data-preview-src="" data-preview-group="1" >
+					</p>
+					</a>
+				</div>
+				<div id="item3" class="mui-slider-item item1" style="width: 85%;">
+					<a href="javascript:void(0)" class="lb">
+					<p class="image-container">
+						<img id="img2" style="max-width:65%;" src="/admin/u/cms/www/201704/24191422c9z7.jpg" data-preview-src="" data-preview-group="1" >
+					</p>
+					</a>
+				</div>
+				<div id="item4" class="mui-slider-item item1" style="width: 85%;">
+					<a href="javascript:void(0)" class="lb">
+					<p class="image-container">
+						<img id="img3" style="max-width:65%;" src="/admin/u/cms/www/201704/24191423wvgt.jpg" data-preview-src="" data-preview-group="1" >
+					</p>
+					</a>
+				</div>
+				 
+			</div>
+		</div>
+          	
+         
+         <div class="mod-box mod detail ui-content ui-fold" data-ui="desc">
+            <h3>简介:</h3>
+            <div class="inner" id="game_desc" onclick="showAllDesc()">
+            《英雄无敌之死亡阴影》是一款超刺激的SLG RPG冒险卡牌策略游戏，在游戏中您要召集传说中的英雄，  
+
+                <span><hr style="float: left;height:1px;border:none;border-top:1px dashed #0066CC; width:80%;">    </span>
+                <span style=" float: right ;font-size:12px;color: #000;font-size: 13px ">展开更多↓ </span>
+            </div>
+		<div id="game_desc_more" style="display:none" class="inner">
+            	《英雄无敌之死亡阴影》是一款超刺激的SLG RPG冒险卡牌策略游戏，在游戏中您要召集传说中的英雄，培养忠诚部队为你探险征战，请做好准备开始魔戒英雄之旅吧！
+<br/>建造宏伟的城堡，参加自由开放的战斗。升级繁华城市，进阶强力英雄，打造史诗装备，探索一幅又一幅美轮美奂的山川河流，在探索中体验战争的乐趣。
+<br/>
+<br/>超高清画质
+<br/>-游戏采用Unity3D引擎开发打造3D全新光影画面，1080p高清画质让您享受一场前所未有的视觉盛宴。
+<br/>
+<br/>建造领地，时刻准备征战
+<br/>-你需要庞大的资源，升级你的内政厅，指挥工人工作，占领并开采富裕的矿场。前往酒馆招募传说英雄，在兵营操练让敌人颤栗的铁骑，开拓未知领域。
+<br/>
+<br/>卡牌冒险策略游戏
+<br/>-您就是唯一的强大帝国的唯一主宰！一步步接近铁王座，用您复仇的心，为您的复仇旅途杀出一条血路。 
+<br/>
+<br/>-诚意满满的挂机游戏。《英雄无敌之死亡阴影》每天不需要投入很大精力，即可获得海量资源。待你获得足够资源，率领您的英雄金戈铁马吧。
+<br/>
+<br/>您准备好领导你的英雄们了吗？开始建造你的帝国并带领你的铁骑进入自由开放式的策略战争游戏！
+            </div>
+        </div>
+
+        <div class="mod-box mod detail ui-content ui-fold" style="border-bottom: none" data-ui="desc">
+            <h3>游戏信息:</h3>
+            <div class="inner game-info">
+                <ul>
+                    <li>
+                        <p>大小：274MB</p>
+                        <p>系统：8.0</p>
+                        <p>语言：中文</p>
+                    </li>
+                    <li>
+                        <p>版本：1.0.1</p>
+                        <p>类别：体育</p>
+                        <p>时间：2017-04-04</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         
+
+        <div class="bn" style="text-align:center;max-height: 100px;display: block;"><!-- 广告位：AD-游戏详情页banner2 -->
+            <script>
+                (function() {
+                    var s = "_" + Math.random().toString(36).slice(2);
+                    document.write('<div id="' + s + '"></div>');
+                    (window.slotbydup=window.slotbydup || []).push({
+                        id: '2578907',
+                        container: s,
+                        size: '20,7',
+                        display: 'inlay-fix'
+                    });
+                })();
+            </script>
+            <div id="_icjx85ma0ivg2t2x7bdml5wmi"></div><div id="_rlc8c7logsv5aiahmtzyc766r"></div>
+            <!-- <script src="http://dup.baidustatic.com/js/om.js"></script> --></div>
+
+    </div>
+
+    <div class="ui-panel" data-role="play" style="display: none;">
+        <div class="mod-box mod detail ui-content" data-ui="desc play">
+            <h3>游戏新服开服</h3>
+            <div class="inner"> 暂无新服开服情况。</div>
+        </div>
+    </div>
+
+    <div class="ui-panel" data-role="package" style="display: none;">
+        <div class="mod-box mod detail ui-content" data-ui="desc package">
+            <h3>游戏礼包</h3>
+            <div class="inner"> 暂无游戏礼包赠送信息。</div>
+        </div>
+    </div>
+
+    <div class="-mob-share-ui -mob-share-initialized -mob-share-ui-theme" style="display: block; visibility: hidden; left: 0px; top: 0px;">
+        <ul class="-mob-share-list" style="transition-property: all; transition-duration: 0s; top: 0px;">
+            <li class="-mob-share-weibo -mob-share-initialized" data-mob-share-center-top="338px" data-mob-share-center-left="177px" style="margin: 0px; top: 338px; left: 177px; position: absolute;"><p>新浪微博</p></li>
+            <li class="-mob-share-tencentweibo -mob-share-initialized" data-mob-share-center-top="338px" data-mob-share-center-left="177px" style="margin: 0px; top: 338px; left: 177px; position: absolute;"><p>腾讯微博</p></li>
+            <li class="-mob-share-qzone -mob-share-initialized" data-mob-share-center-top="338px" data-mob-share-center-left="177px" style="margin: 0px; top: 338px; left: 177px; position: absolute;"><p>QQ空间</p></li>
+            <li class="-mob-share-qq -mob-share-initialized" data-mob-share-center-top="338px" data-mob-share-center-left="177px" style="margin: 0px; top: 338px; left: 177px; position: absolute;"><p>QQ好友</p></li>
+        </ul>
+        <div class="-mob-share-close">取消</div>
+    </div>
+    <div class="-mob-share-ui-bg" style="display: none;"></div>
+    <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=1c2dc1fe019af"></script>
+
+
+
+
+
+    <!--         <a href="/space-add-action-collect-id-2326.html" data-id="2326" data-url="/space-add-action-collect-id-2326.html" data-check="/space-check-action-collect-id-2326.html" class="ui-btn fav" data-ui="danger">+ 收藏</a>
+     -->
+    <div class="down-layout">
+        <a href="https://itunes.apple.com/cn/app/%E9%BE%99%E7%8F%A0%E6%BF%80%E6%96%97/id1066697625?mt=8&amp;uo=4" id="playBtn" class="ui-btn play playBtn" data-ui="danger small active">立即安装</a>
+    </div>
+
+
+    <script>
+        var PAGE_GAME_INFO = !0;
+        (function (n) {
+            var node = document.querySelector(n);
+            if (!node) return;
+
+            node.href += location.search;
+        })('#playBtn');
+    </script>
+</div>
+
+
+<a href="javascript:void(0);" class="ui-btn gotop" id="gotop"><i class="icon-top"></i></a>
+
+<script>require(['app'], function(app) { app.init(window.appcfg); });</script>
+
+<script src="./js/base.js"></script>
+
+<script>
+	mui.init();
+    $(function () {
+    	
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'  || ua.match(/WeiBo/i) == "weibo"
+                ||navigator.userAgent.indexOf("MQQBrowser") > -1){
+            $("#playBtn").addClass("isWx").attr("href","javascript:void(0)")
+        }
+
+        showTips();
+
+        $("#playBtn.isWx").click(function (e) {
+            $(".down-tips").show()
+        })
+    });
+
+    function showTips() {
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            $(".android_tips").hide()
+        } else{
+            $(".ios_tips").hide()
+        }
+    }
+</script>
+</div>
+<div id="slider2" class="mui-slider">
+	<div class="complete">
+		<a id="complete" href="javascript:void(0)">完成</a>
+	</div>
+
+	<br />
+	<hr />
+	
+		  <div class="mui-slider-group out-group">
+					<div class="mui-slider-item item2"><a href="#"><img id="item2-0" src="http://test.ismartinfo.cn/admin/u/cms/www/201704/241914211y94.jpg" data-preview-src="" data-preview-group="0"></a> </div>
+					<div class="mui-slider-item item2"><a href="#"><img id="item2-1" src="http://test.ismartinfo.cn/admin/u/cms/www/201704/241914220lny.jpg" data-preview-src="" data-preview-group="1"></a> </div>
+					<div class="mui-slider-item item2"><a href="#"><img id="item2-2" src="/admin/u/cms/www/201704/24191422c9z7.jpg" data-preview-src="" data-preview-group="2"></a> </div>
+					<div class="mui-slider-item item2"><a href="#"><img id="item2-3" src="/admin/u/cms/www/201704/24191423wvgt.jpg" data-preview-src="" data-preview-group="3"></a> </div>
+		  </div>
+	<br />
+	<hr />
+</div>
+       
+       <!--<div class="out-pop">
+       	<div class="in-pop">
+       		<div class="pop-top">
+       			<h4>此项目大于100MB</h4>
+       			<p>除非此项目支持增量下载，否则您必须连接至无线局域网才能下载"龙之谷"</p>
+       		</div>
+       		<div class="pop-bot">
+       			<a href="javascript:void(0)">取消</a>
+       			<a href="javascript:void(0)">好</a>
+       		</div>
+       	</div>
+       </div>-->
+	<script src="app.js"></script>
+	<script src="js/detail2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+.eject{
+ 	width: 60%;
+ 	height: 40px;
+ 	text-align: center;
+ 	color: white;
+ 	background: black;
+ 	margin-left: 20%;
+ 	border-radius: 5px;
+ 	line-height: 40px;
+ 	font-size: 14px;
+}
+
+.opacity-bg{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0,0,0,1);	
+	top: 0;
+	left: 0;
+	z-index: 100000;
+}
+
+.crenter-eject{
+	background: white;
+	position: relative;
+	opacity: 1;
+	width: 64%;
+	margin-left: 18%;
+	height: auto;
+	margin-top: 65%;
+	border-radius: 10px;
+}
+
+.detail-title{
+	text-align: center;
+	font-weight: normal;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0!important;
+}
+.no-yes{
+	height: 40px;
+}
+.no-yes a{
+	display: inline-block;
+	width: 50%;
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 9px;
+	padding-top: 9px;
+}
+.no-yes a:nth-child(1){
+	float: left;
+	border-right: 1px solid #ccc;
+}
+.no-yes a:nth-child(2){
+	float: right;
+}
+
+
+.loading-bg{
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 2000;
+}
+.loading-img{
+	position: fixed;
+	top: 37%;
+	width: 100%;
+	margin-left: 39%;
+	z-index: 20000;
+}
+
+.loading-img img{
+	width: 80px!important;
+	height: 80px!important;	
+}
+/*微信短信分享*/
+.wechat-share{
+	height: 172px;
+	border-radius: 7px;
+	top: 0;
+	width: 86%;
+	margin-left: 7%;
+	position: fixed;
+	z-index: 9999999;
+	top: 50%;
+	background: url(../images/share-bg.png) no-repeat;
+}
+.wechat{
+	background-image: url(../images/wechat.jpg);
+}
+.SMS{
+	background-image: url(../images/SMS.jpg);
+}
+.wechat-share-title{
+	line-height: 34px;
+}
+.wechat-share h4{
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+	color: white;
+	font-weight: normal;
+}
+.wechat-share-title a{
+	position: relative;
+	top: -39px;
+	right: 0;
+	font-size: 35px;
+	color: white;
+	float: right;
+}
+.share-content p:nth-child(1){
+	padding-left: 20px;
+	margin-top: 10px;
+	color: black;
+}
+.wechat-code{
+	-webkit-touch-callout: all!important;
+    -webkit-user-select: all!important;
+    -khtml-user-select: all!important;
+    -moz-user-select: all!important;
+    -ms-user-select: all!important;
+    user-select: all!important;
+	text-align: center;
+	margin-top:10px;
+	font-size: 24px;
+	padding-left: 1%;
+	color: #FA961A;
+}
+.share-content p:nth-child(3){
+	margin-top:20px;
+	color: black;
+	text-align: center;
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+	.wechat-share{
+		top: 45%;
+		margin-left: 10%;
+	}
+	.wechat-share-title a{
+		top: -40px;
+		right: 7%;
+	}
+	.wechat-code{
+		text-align: left;
+		padding-left: 28%;
+	}
+	.loading-img{	
+		margin-left: 42%;
+	}
+
+}

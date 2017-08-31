@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	  	<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	  	<title></title>   
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="money_record.css"/>
+	    <script src="../js/jquery.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="https://cdn.bootcss.com/blueimp-md5/2.7.0/js/md5.js"></script>
+		<script src="../js/register.js"></script>
+		<script src="../js/commun.js?v=4"></script>
+		<script src="../js/user.js?v=10"></script>
+		<script src="../js/swiper.jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+		<script src="../js/public.js"></script>
+		<script src="mongey_record.js"></script>
+	</head>
+	<body style="background: #F6F6F6;">	
+		<header class="mui-bar mui-bar-nav" style="background: #00B6F0;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;font-size: 18px;line-height: 24px;">返回</a>
+			<h1 class="mui-title" style="color: white;">钱包记录</h1>
+		</header>
+		
+ 
+ 
+			   
+			 
+			 
+	 
+ 
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper record-container" id="record-container">   
+		    <div class="mui-scroll">
+		        <!--数据列表-->
+		        <ul class="mui-table-view">
+		        	 
+		        </ul>
+		     </div>
+		</div>
+ 
+		
+
+		<p class="bot-text">只能查看最近一个月的流水</p>
+		<script>
+			mui.init({
+		pullRefresh: {
+			container: '#pullrefresh',
+			up: {
+				height:100,
+				auto:true,//可选,默认false.自动上拉加载一次
+				contentrefresh: '正在加载...',
+				callback: getUserRecords
+			}
+		}
+	});
+	
+	//上拉加载
+		 
+		function pullupRefresh(div,pageSize,pageNumTotal,pageNum) {	
+			 
+			setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().endPullupToRefresh((pageNum > pageNumTotal)); //参数为true代表没有更多数据了。20是总的条目数
+		      var table = document.body.querySelector('.mui-table-view');
+		      var cells = document.body.querySelectorAll('.mui-table-view-cell');
+		      
+		     // for (var i = cells.length, len = pageSize; i < len; i++) {
+		        var li = document.createElement('li');
+		        li.className = 'mui-table-view-cell';
+		        li.innerHTML = div ;//"<div class='record'><div class='left-title'>买号-角色ID:0844669</div><div class='right-record'><p class='money-reduce'>-25.60</p><p class='date'>03/24  &nbsp;21:48:59</p></div></div>";
+		       
+		        table.appendChild(li);
+		      //}	      
+		    }, 1500);
+		    // this.endPullupToRefresh(false);
+		  }
+		</script>
+	</body>
+	<script>
+		
+	</script>
+</html>

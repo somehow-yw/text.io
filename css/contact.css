@@ -1,0 +1,39 @@
+.contact-container{
+	margin-top: 54px;
+	padding-bottom: 60px;
+}
+.contact-content{
+	margin-top: 14px;
+	background: white;
+	padding: 16px;
+	box-sizing: content-box;
+}
+.contact-content h5{
+	font-size: 16px;
+	color: #46CAF4;
+	margin-bottom: 10px;
+	font-weight: bolder;
+}
+.contact-content p{
+	width: 95%;
+	color: #373737;
+}
+
+.contact-bot{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: white;
+}
+.contact-bot a{
+	display: inline-block;
+	width: 90%;
+	margin-left: 5%;
+	color: white;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 18px;
+	padding-left: 40%;
+	background:url(../images/kefu.png) no-repeat 38% center #00B6F0;
+	background-size: 10%;
+}

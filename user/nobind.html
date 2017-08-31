@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="apple-mobile-web-app-title" content="4488.mobi">
+	    <meta property="qc:admins" content="2357776527651056375">
+	    <link rel="shortcut icon" href="../images/logo200.png">
+	    <link rel="apple-touch-icon" href="../images/logo200.png">
+	    <title></title>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="../css/register.css"/>
+	    <script src="../js/jquery.min.js"></script>
+	    <script src="../js/swiper.jquery.min.js"></script>
+ 	    <script src="../js/commun.js?v=4" ></script>
+	    <script src="../js/user.js?v=8" ></script>	  
+	     <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	     <script src="../js/public.js?v=1.0.121212"></script>
+	     <script src="../js/nobind.js"></script>
+	     
+	     	  <script src="../js/tongji.js"></script>
+	     
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav"> 
+			<a id="back-login"   class="mui-action-back mui-pull-left mui-icon mui-icon-left-nav" style="font-size: 30px;"></a>
+			<h1 class="mui-title reg-title">手机号解除绑定</h1>
+		</header>
+		<div id="form">
+			<p>
+				<input type="tel" id="username" placeholder="请输入11位手机号码" />
+			</p>
+			<p style="overflow: hidden;">
+				<input type="tel" id="smscode" placeholder="验证码输入框" style="float: left;width: 65%;"/>
+
+<!--				<a id="get-verification" onclick="getVerification(4)  href="javascript:void(0)">获取验证码</a>-->
+
+				<a id="get-verification"  onclick="getVerificationUnBind(3)" href="javascript:void(0)">获取验证码</a>
+
+			</p>
+			<a id="next-p">
+				<button id="next" onclick="unBindPhone()">确定解除绑定</button>
+			</a>
+		</div>
+		<p style="color: #7EB2B1;margin-top: 30px;text-align: center;">解除绑定后,不可以再通过手机号登录以及找回密码</p>
+		<!---->
+		<!--<div class="eject" style="display: none;">1233131</div>
+		
+		<div class="opacity-bg" style="display: none;">
+			<div class="crenter-eject">
+				<h4 class="detail-title">是否取消登录</h4>
+				<p class="no-yes">
+					<a id="yes" onclick="no()" href="javascript:void(0);">否</a>
+					<a id="no" onclick="yes()"  href="javascript:void(0);">是</a>
+				</p>
+			</div>
+		</div>-->
+		
+	<script type="text/javascript">
+		getUserInfo(2);
+	</script>
+	</body>
+
+</html>

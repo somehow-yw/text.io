@@ -1,0 +1,40 @@
+header{
+	box-shadow: none!important;
+}
+.mui-slider-indicator{
+	z-index: 10!important;
+	bottom: 5%;
+}
+
+.mui-indicator{
+	width: 25px!important;
+	height: 25px!important;
+	border: 1px solid white;
+	background: transparent!important;
+	box-shadow: none !important; 
+} 
+.mui-active{
+	background: white!important;
+	box-shadow: none;
+}
+.mui-slider{
+	margin-top: 44px!important;
+}
+.mui-slider-item img{
+	width: 100%;
+	max-height: 94%;
+	box-sizing: content-box!important;
+}
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+	.mui-slider-item img{
+		max-height: 96%;
+	}
+}
+
+.ui-btns a{
+	float: right!important;color: white!important;margin-top: 10px!important;
+}
+
+
+
+

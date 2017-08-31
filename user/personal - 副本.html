@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/swiper.jquery.min.js"></script>
+    <script src="../js/commun.js?v=3"></script>
+    <script src="../js/user.js?v=5"></script>
+	 <link rel="stylesheet" type="text/css" href="../css/public.css"/>
+ 
+      <script src="../js/jquery.min.js"></script>
+       <script src="../js/public.js"></script>
+	<script src="../js/personal.js"></script>
+    <script>
+
+   		
+    </script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/personal.css?v=1" rel="stylesheet"/>
+     <style type="text/css">
+     
+     		body{
+     			font-family: "微软雅黑"
+     		}
+			.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			p img {
+				max-width: 100%;
+				height: auto;
+			}
+
+		</style>
+  
+    
+    <script type="text/javascript" charset="utf-8">
+      
+      	   		
+ 
+    </script>
+</head>
+<body style="background: url(../images/psersonPageBg.jpg);">
+<div class="mui-content">
+	<div class="mui-preview-header" style="height: 15%;">
+<!-- 		<div class="header-center" style="display: none;">
+ -->				
+ 		<div class="header-center" id="unlogin">		
+			<div style="width: 1px;"></div>
+			<div class="header-center-on" onclick="toLoginPage()">
+				<div class="login">
+					<div class="login-center">
+					</div>
+				</div>
+				<h5>点击登录></h5>
+			</div>
+			<div style="width: 1px;"></div>
+		</div>
+		
+		<div class="header-center"  id="alreadyLogin" style="display: none;" onclick="user_Logout()" >
+			<div style="width: 1px;"></div>
+			<div class="header-center-on">
+				<div class="login" >
+					<div class="login-center" style="background: url(../images/logo200.png) no-repeat center center;
+						background-size: 35px 35px;"></div>
+				</div>
+				<div  class="right-center" style="margin-left: 10px;">
+					<p class="username" id="username" style="color: white;font-size: 20px;text-align:center;word-spacing:inherit">gq1809769</p>
+					<p class="phone" id="phone" style="border-radius: 10px;height: 20px;border: 1px solid white; color: white;">未绑定手机</p>
+				</div>
+			</div>
+			<div style="width: 1px;"></div>
+		</div>
+	</div>
+	
+	<div class="mui-center">
+		<!--<div class="mui-center-on">
+			<div class="money">
+				<div class="money-yuan">
+					<div></div>
+				</div>
+				<a>钱包</a>
+				<span>0.00></span>
+			</div>
+		</div>-->
+		<div>
+			<div style="display: flex;justify-content: space-between;margin-top:10%; ">
+				<div id="updatepassword" style="width: 60px;height:60px;border-radius: 50%;background:rgb(15,212,130);padding-bottom: 30px;
+				">
+					<img src="../images/updatepassword.png"  alt="" style="width: 50px;height: 50px; display: flex;left: 0;top: 0;right: 0;bottom: 0;margin: 0 auto;">
+					<p style="color:black;top: 30px;margin-bottom: 0; padding-top:20px;text-align: center;" >修改密码</p>
+				</div>
+				<div style="width: 60px;height: 60px;border-radius: 50%;background:rgb(255,199,0);
+				">
+					<img src="../images/zhekou.png" alt="" style="width: 50px;height: 50px; display: flex;left: 0;top: 0;right: 0;bottom: 0;margin: 0 auto;">
+					<p style="color:black;top: 30px;margin-bottom: 0; padding-top:20px;text-align: center;" >折扣说明</p>
+				</div>
+				<div style="width: 60px;height: 60px;border-radius: 50%;background:rgb(17,206,178);
+				">
+					<img src="../images/qianbao.png" alt="" style="width: 50px;height: 50px; display: flex;left: 0;top: 0;right: 0;bottom: 0;margin: 0 auto;">
+					<p style="color:black;top: 30px;margin-bottom: 0; padding-top:20px;text-align: center;" >消费记录</p>
+				</div>
+			</div>
+		
+			<div id="call" style="display: flex;justify-content: space-between;margin-top:10%;align-items: center; ">
+				<div id="lxkf-container" style="width: 60px;height: 60px;border-radius: 50%;background:rgb(74,215,146);
+				">
+					<img id="lxkf" src="../images/kefu.png" alt="" style="width: 50px;height: 50px; display: flex;left: 0;top: 0;right: 0;bottom: 0;margin: 0 auto;">
+				</div>
+				<div id="add-qq-container" style="width: 60px;height: 60px;border-radius: 50%;background:#0CC1EE;
+				">
+					<img id="add-qq" src="../images/qq.png" alt="" style="width: 50px;height: 50px; display: flex;left: 0;top: 0;right: 0;bottom: 0;margin: 0 auto;">
+				</div>
+			</div>
+			<div style="margin: 3% 1%; display: flex;justify-content: space-between;align-items: center;  ">
+				<div style="font-size: 13px;color: #4AD792;
+				">
+					联系客服
+				</div>
+				
+				<div style="font-size: 13px;margin-left: 5%;color: #0CC1EE;
+				">
+					加入QQ群
+				</div>
+			</div>
+		</div>
+	<div  class="version" style="color: #787878;font-size: 14px;text-align: center;">
+					当前版本:v0.24(300)
+				</div>
+	</div>
+	
+	<div id="isLogout" class="opacity-bg" style="display: none;">
+			<div class="crenter-eject">
+				<h4 class="detail-title">是否取消登录</h4>
+				<p class="no-yes">
+					<a id="yes" onclick="cancelLogout()" href="javascript:void(0);">否</a>
+					<a id="no" onclick="logout()"  href="javascript:void(0);">是</a>
+				</p>
+			</div>
+	</div>
+
+	<div id="bot-bar" class="mui-bar mui-bar-tab" style="background: #EAEAEA !important;z-index: 99;">
+		<a class="mui-tab-item" id="game" href="../list.html">
+			<span class="mui-tab-label">游戏</span>
+		</a>
+		<a class="mui-tab-item"  href="../gifts/noviece_pack.html">
+			<span class="mui-tab-label">礼包</span>
+		</a>
+		<a class="mui-tab-item" href="./personal.html">
+			<span class="mui-tab-label" style="color: #0DBAF1 !important;">我的</span>
+		</a>
+	</div>
+	
+</div>
+
+ 
+
+    <script type="text/javascript" charset="utf-8">       
+      	getUserInfo();
+    </script>
+</body>
+</html>
