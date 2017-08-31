@@ -101,7 +101,7 @@
 		<p class="pl img_pl"><span class="plname">纵深</span><span class="pltimes">3177评论</span><span class="pltime">4小时前</span></p>
 		<span class="closeBtn"></span>
 	</div>
-	<div class="same_news" id="wrapper">
+	<div class="same_news" id="same_news">
 		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界焱？有人竟把它队是龙焱？有人竟把它在世界特种部队中排名第三</p>
 		<div class="imgbox">
 			<img src="images/imgnews.jpg" />
@@ -111,9 +111,8 @@
 		<p class="pl img_pl"><span class="plname">纵深</span><span class="pltimes">3177评论</span><span class="pltime">4小时前</span></p>
 		<span class="closeBtn"></span>
 	</div>
-	
+	<!--<div id="shaxin" style="height: 200px;width: 100%;"></div>-->
 </div>
-
 </div>
 <!--头条内容结束-->
 <footer style="padding-bottom:5rem;text-align: center;" id="footer">
@@ -152,10 +151,12 @@
 </div>
 
 	<script type="text/javascript">
+	//这里写获得数据。有数据返回之后，加上这句话： $('.loading-img')[0].hide()
+		
 		//启用双击监听
 	mui.init({
 		pullRefresh:{
-			container: document.querySelector('html'),
+			container: document.querySelector('#same_news'),
 			up: {
 				height:0,
 				auto:false,
