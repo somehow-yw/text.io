@@ -71,14 +71,14 @@
 	
 <img src="./images/icon.png" width="0" height="0" style="position:absolute;left:-9999px">
 <!-- start 主导航 -->
-<header class="ui-bar" data-ui="header danger static" id="header">
+<div class="ui-bar" data-ui="header danger static" id="header">
     <h1 data-ui="title">4488头条</h1>
     <div class="ui-btns     -mob-share-open" data-ui="inline rounded" 
     onclick="_hmt.push(['_trackEvent', BAIDUTONGJI_CATEGORY.ON_GAME_LIST+' ,'+BAIDUTONGJI_OPTION.COLLECTION+', '+BAIDUTONGJI_CATEGORY.ON_GAME_LIST+'])">
         	分享
     </div>
 
-</header>
+</div>
 <!-- end 主导航 -->
 <!--头条内容开始-->
 <div id="muiMove">
@@ -361,19 +361,19 @@
 <script src="../js/redirect.js"></script>
 	<script type="text/javascript">
 		//启用双击监听
-	mui.init({
-		pullRefresh:{
-			container: document.querySelector('#muiMove'),
-			up: {
-				height:0,
-				auto:false,
-				callback: function () {
-					$('#footer').show();
-					this.endPullupToRefresh(true);
-				}
-			}
-		}
-	});
+//	mui.init({
+//		pullRefresh:{
+//			container: document.querySelector('#muiMove'),
+//			up: {
+//				height:0,
+//				auto:true,
+//				callback: function () {
+//					$('#footer').show();
+//					this.endPullupToRefresh(true);
+//				}
+//			}
+//		}
+//	});
 	</script>
 </body>
 </html>
