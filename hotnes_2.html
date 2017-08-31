@@ -114,12 +114,13 @@
 	</div>
 	</div>
 </div>
-</div>
-<!--头条内容结束-->
-<footer style="padding-bottom:5rem;text-align: center;" id="footer">
+<div style="padding-bottom:5rem;text-align: center;" id="footer">
        <img src="images/get_loading.gif">
         <p style="color: rgb(130,130,130);font-size: 1rem;">加载中</p>
-</footer>
+</div>
+</div>
+<!--头条内容结束-->
+
 <div class="footer">
 
     <ul>
@@ -159,10 +160,9 @@
 		pullRefresh:{
 			container: document.querySelector('#same_news'),
 			up: {
-				height:1000,
+				height:8,
 				auto:false,
 				callback: function () {
-					alert('123');
 					$('#footer').show();
 					this.endPullupToRefresh(true);
 				}
