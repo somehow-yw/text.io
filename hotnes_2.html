@@ -153,19 +153,20 @@
 
 	<script type="text/javascript">
 		//启用双击监听
-//	mui.init({
-//		pullRefresh:{
-//			container: document.querySelector('#muiMove'),
-//			up: {
-//				height:0,
-//				auto:true,
-//				callback: function () {
-//					$('#footer').show();
-//					this.endPullupToRefresh(true);
-//				}
-//			}
-//		}
-//	});
+	mui.init({
+		pullRefresh:{
+			container: document.querySelector('html'),
+			up: {
+				height:0,
+				auto:false,
+				callback: function () {
+					alert('123');
+					$('#footer').show();
+					this.endPullupToRefresh(true);
+				}
+			}
+		}
+	});
 	</script>
 </body>
 </html>
