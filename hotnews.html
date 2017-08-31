@@ -29,7 +29,6 @@
     <link rel="apple-touch-startup-image" href="./images/logo200.png" media="screen and (min-device-width: 481px) and (max-device-width:1024px) and (orientation:portrait)">
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/base.css?v=2">
-    <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/mui.css"/>
     <link rel="stylesheet" type="text/css" href="css/personal.css"/>
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
@@ -40,8 +39,6 @@
     <script src="js/detail.js?v=2"></script>     
     <script src="./js/jquery-1.12.min.js?v=2"></script>
     <script src="./js/commun.js?v=9"></script>
-     
-    <script src="./js/swiper.jquery.min.js"></script>
     <script src="js/mui.min.js"></script>
     <script src="./js/list.js?v=43"></script>
     <script src="./js/public.js??v=1.0.121212"></script>
@@ -84,6 +81,7 @@
 </header>
 <!-- end 主导航 -->
 <!--头条内容开始-->
+<div id="muiMove">
 <div class="hotnewsBody">
 	<div class="hot_title">
 		<p>中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
@@ -99,7 +97,7 @@
 	<!--单图新闻-->
 	<div class="singleImg">
 		<div class="singleImg_left">
-			<p class="singleImg_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
+			<p class="singleImg_title">有人竟把它在世界特种部队中排名第三中国最大的有人竟把它在世界特种部队中排名第三的</p>
 			<p class="pl img_pl"><span class="plname">纵深</span><span class="pltimes">3177评论</span><span class="pltime">4小时前</span></p>
 		<span class="closeBtn"></span>
 		</div>
@@ -110,7 +108,7 @@
 	</div>
 	<!--下面样式一样的新闻-->
 	<div class="same_news">
-		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
+		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部焱？有人竟把它队中排名第三中国最大的</p>
 		<div class="imgbox">
 			<img src="images/imgnews.jpg" />
 			<img src="images/imgnews.jpg" />
@@ -120,7 +118,7 @@
 		<span class="closeBtn"></span>
 	</div>
 	<div class="same_news">
-		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
+		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中排名第三</p>
 		<div class="imgbox">
 			<img src="images/imgnews.jpg" />
 			<img src="images/imgnews.jpg" />
@@ -129,8 +127,8 @@
 		<p class="pl img_pl"><span class="plname">纵深</span><span class="pltimes">3177评论</span><span class="pltime">4小时前</span></p>
 		<span class="closeBtn"></span>
 	</div>
-	<div class="same_news">
-		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三中国最大的特种部队是龙焱？有人竟把它在世界特种部队中排名第三</p>
+	<div class="same_news" id="wrapper">
+		<p class="same_news_title">中国最大的特种部队是龙焱？有人竟把它在世界焱？有人竟把它队是龙焱？有人竟把它在世界特种部队中排名第三</p>
 		<div class="imgbox">
 			<img src="images/imgnews.jpg" />
 			<img src="images/imgnews.jpg" />
@@ -142,7 +140,7 @@
 	
 </div>
 
-
+</div>
 <!--头条内容结束-->
 <footer style="padding-bottom:5rem;text-align: center;" id="footer">
        <img src="images/get_loading.gif">
@@ -307,7 +305,6 @@
 
 <script>require(['app'], function(app) { app.init(window.appcfg); });</script>
 <script src="./js/base.js?v=5"></script>
-<script src="js/clamp.min.js"></script>
 <script>
 	
 	
@@ -362,29 +359,21 @@
     })
 </script>
 <script src="../js/redirect.js"></script>
- 
-<script>
-//	getURL();
-//	browserListRedirect();
-</script>
-<script>
-	var winHeight = window.screen.availHeight ,//浏览器窗口高度
-		documentHeight = document.body.scrollHeight , //文档高度
-		scrollHeight = 0; //滚动高度
-	window.onscroll = function (e) { //监听页面滚动事件
-		var e = e || window.event;
-		alert('页面滚动开始,检测手机和苹果端是否支持Window.onsroll事件');
-		scrollHeight = document.documentElement.scrollTop||document.body.scrollTop;
-		alert('浏览器窗口的高度', winHeight, '文档高度', documentHeight, '滚动高度', scrollHeight);
-		console.log('浏览器窗口的高度', winHeight, '文档高度', documentHeight, '滚动高度', scrollHeight);
-		if (scrollHeight+winHeight >= documentHeight){
-			$('#footer').show();
+	<script type="text/javascript">
+		//启用双击监听
+	mui.init({
+		pullRefresh:{
+			container: document.querySelector('#muiMove'),
+			up: {
+				height:0,
+				auto:false,
+				callback: function () {
+					$('#footer').show();
+					this.endPullupToRefresh(true);
+				}
+			}
 		}
-		else if (scrollHeight+winHeight < documentHeight){
-			$('#footer').hide();
-		}
-	}
-</script>
-
+	});
+	</script>
 </body>
 </html>

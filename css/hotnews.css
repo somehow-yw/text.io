@@ -1,3 +1,4 @@
+#muiMove{width:100% ; height: 100%;}
 p{font-size: inherit;margin-bottom: 0;color: inherit;}
 #header{position: fixed;}
 .hotnewsBody{font-family: "微软雅黑" !important;padding-bottom: 1.0667rem;padding-top: 2.853rem;}
@@ -190,3 +191,4 @@ p{font-size: inherit;margin-bottom: 0;color: inherit;}
 #footer{
 	display: none;
 }
+.mui-pull{display: none !important;}
